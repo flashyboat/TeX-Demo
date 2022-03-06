@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+
+    <!--  KaTeX -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+        integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"
+        integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                // customised options
+                // • auto-render specific keys, e.g.:
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },
+                    { left: '\\[', right: '\\]', display: true }
+                ],
+                // • rendering keys, e.g.:
+                throwOnError: false
+            });
+        });
+    </script>
+
+    <title>KaTeX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>$\KaTeX$ Demo</h1>
+
+    <!--  Your Equation -->
+    <div contenteditable="false" id="eqnDisplay">$$\prod_{m=1}^\infty\left( 1 - x^{2m}\right)\left( 1 + x^{2m-1}
+        y^2\right)\left( 1 +\frac{x^{2m-1}}{y^2}\right)= \sum_{n=-\infty}^\infty x^{n^2} y^{2n} \qquad \text{Jacobi
+        Triple Product}$$</div>
+
+    <div id="main">
+        <!-- https://q.uiver.app/?q=WzAsNSxbMSwwLCJcXHBpXzEoVVxcY2FwIFYpIl0sWzAsMSwiXFxwaV8xKFUpIl0sWzIsMSwiXFxwaV8xKFYpIl0sWzEsMSwiXFxwaV8xKFVcXGN1cCBWKSJdLFsxLDMsIkgiXSxbMCwxXSxbMCwyXSxbMSwzXSxbMiwzXSxbMCwzXSxbMSw0XSxbMiw0XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0= -->
+        <iframe class="quiver-embed"
+            src="https://q.uiver.app/?q=WzAsNSxbMSwwLCJcXHBpXzEoVVxcY2FwIFYpIl0sWzAsMSwiXFxwaV8xKFUpIl0sWzIsMSwiXFxwaV8xKFYpIl0sWzEsMSwiXFxwaV8xKFVcXGN1cCBWKSJdLFsxLDMsIkgiXSxbMCwxXSxbMCwyXSxbMSwzXSxbMiwzXSxbMCwzXSxbMSw0XSxbMiw0XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=&embed"
+            width="537" height="560" style="border-radius: 8px; border: none;"></iframe>
+        <div>
+            <h2>Enter TeX expression below, WITHOUT $ sign</h2>
+            <textarea rows="10" cols="50" id="eqn"> \prod_{m=1}^\infty\left( 1 - x^{2m}\right)\left( 1 + x^{2m-1} y^2\right)\left( 1 +\frac{x^{2m-1}}{y^2}\right)= \sum_{n=-\infty}^\infty x^{n^2} y^{2n} \qquad \text{Jacobi Triple Product}</textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

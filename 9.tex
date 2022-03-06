@@ -1,0 +1,36 @@
+% build with makefile
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage[right= 5cm, marginpar = 3.5cm]{geometry}
+\usepackage[skip=\medskipamount]{parskip}
+\setlength{\parindent}{0pt}
+
+\usepackage{imakeidx}
+\makeindex
+
+\begin{document}
+
+    \begin{equation}
+        e=mc^2 \label{mass-energy}
+    \end{equation}
+
+    Links of all shapes and sizes \ref{mass-energy}. Head to \hyperlink{telport}{nextpage}!
+
+
+    A \emph{makefile} helps you compile easier\footnote{makefile can compile other programs as well, not just \TeX} consult 
+    \href{https://gnu.org/software/make/manual/make.html#toc-Overview-of-make}{Documentation}
+
+
+    A  \marginpar{How To Solve It} great discovery solves a great problem, but there is a grain of discovery in the solution of any problem. Your problem may be modest, but if it challenges your curiosity and brings into play your inventive faculties, and if you solve it by your own means, you may experience the tension and enjoy the triumph of discovery. 
+
+
+    A commutative group\index{group} is a set with a binary operation that obey certain laws of algebra.
+    
+    \newpage
+
+    \hypertarget{telport}{goto} 
+
+
+    \printindex
+\end{document}

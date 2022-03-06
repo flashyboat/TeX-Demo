@@ -1,0 +1,39 @@
+% features, features, more features
+
+\documentclass{book} 
+
+\input{assets/preamble}
+\input{assets/shortcuts}
+
+\begin{document}
+
+\title{My Book}
+\author{some random person}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\chapter{Tutorial}
+
+% shortcuts 
+$\R$
+\greet{alice}{bob}
+
+\input{assets/section1}
+\input{assets/section2}
+\input{assets/section3}
+
+\begin{bob}% table%\begin{}[]%\addplot table[] {};%\end{}%\end{}
+    There are 
+    \begin{displaymath}
+        \prod_{i=0}^d \frac{q^{n+1}-q^j}{q^{d+1}-q^j}
+    \end{displaymath}
+    $d$-subspaces of PG(n,$\mathbb{F}_n$).
+\end{bob}
+
+
+\begin{tikzpicture}% table%\begin{}[]%\addplot table[] {};%\end{}%\end{}
+    
+\end{tikzpicture}
+
+\end{document}
